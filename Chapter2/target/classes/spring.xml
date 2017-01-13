@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="compactDisc" class="wsu.sudarshan.springInAction.Chapter2.SgtPeppers"/>
+   
+   <bean id="cdPlayer" class="wsu.sudarshan.springInAction.Chapter2.CDPlayer">
+   			<constructor-arg ref="compactDisc" />
+   	</bean>
+   
+    <bean id="compactDisc1" class="wsu.sudarshan.springInAction.Chapter2.BlankDisc">
+    		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+    		<constructor-arg value="The Beatles"/>
+    		<constructor-arg>
+			    <list>
+			    	<value>Sgt. Pepper's lonely hearts club band</value>
+			    	<value>With a little help from my friends</value>
+			    </list>
+			</constructor-arg>
+    </bean>
+</beans>
